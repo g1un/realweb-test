@@ -1,39 +1,47 @@
 /*script*/
-//rest-search
-if($('[name="restaurant"]').length) {
-	$('[name="restaurant"]').on('focus', function () {
-		$('.rest-find').addClass('rest-find--searching');
-	});
-	$('[name="restaurant"]').on('blur', function () {
-		$('.rest-find').removeClass('rest-find--searching');
+if($('.js-input').length) {
+	var inputChange = $('.js-input-change');
+
+	inputChange.on('click', function() {
+		var _this = $(this);
+		var input = _this.parent().children('.js-input');
+
+		if(_this.text() == 'изменить') {
+			_this.text('сохранить');
+		} else {
+			_this.text('изменить');
+		}
+
+		input.prop('disabled', function() {
+			return !input.prop('disabled');
+		});
+
+		input.focus();
 	});
 }
 
-//percent-circle
-if($('.percent-circle__input').length) {
-	$('.percent-circle__input').on('change', function(){
-		var val = parseInt($(this).val());
-		// var $circle = $('.percent-circle__bar');
-		var $circle =  $(this).prev().children('.percent-circle__bar');
+if($('.js-change-address').length) {
+	var changeAddress = $('.js-change-address');
 
-		console.log($circle);
+	changeAddress.on('click', function() {
+		var _this = $(this);
+		var addressBlock = _this.closest('.settings-address');
 
-		if (isNaN(val)) {
-			val = 100;
+		addressBlock.toggleClass('settings-address--edit');
+
+		if(_this.text() == 'изменить') {
+			_this.text('сохранить');
+		} else {
+			_this.text('изменить');
 		}
-		else{
-			var r = $circle.attr('r');
-			var c = Math.PI*(r*2);
+	});
+}
 
-			if (val < 0) { val = 0;}
-			if (val > 100) { val = 100;}
+if($('.js-delete-address').length) {
+	var deleteAddress = $('.js-delete-address');
 
-			var pct = ((100-val)/100)*c;
-
-			$circle.css({ strokeDashoffset: pct});
-
-			$circle.closest('.percent-circle').attr('data-pct',val);
-		}
+	deleteAddress.on('click', function() {
+		$(this).parent().remove();
 	});
 }
 /*/script*/

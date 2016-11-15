@@ -56,6 +56,15 @@ ul {
   font-weight: 400;
 }
 
+.title-sm-bold {
+  font-family: OpenSans-Bold, sans-serif;
+  font-size: 14px;
+  line-height: 1.2em;
+  color: #333;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
 .title-xs, .btn {
   font-family: Verdana, sans-serif;
   font-size: 12px;
@@ -67,6 +76,7 @@ ul {
 .text-input {
   padding: 0 10px;
   box-sizing: border-box;
+  height: 28px;
   font-family: Verdana, sans-serif;
   font-size: 14px;
   line-height: 28px;
@@ -131,6 +141,11 @@ ul {
   outline: none;
 }
 
+.btn:hover, .btn:focus {
+  background: #e85a22;
+  border-bottom-color: #cb4815;
+}
+
 /*/buttons*/
 /*radio*/
 .radiobtn {
@@ -140,12 +155,6 @@ ul {
 .radiolbl {
   padding-left: 27px;
   cursor: pointer;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
   line-height: 29px;
   position: relative;
 }
@@ -189,12 +198,6 @@ ul {
 .checkbox-lbl {
   padding-left: 28px;
   cursor: pointer;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
   line-height: 18px;
   position: relative;
 }
@@ -229,6 +232,21 @@ ul {
 }
 
 /*/checkbox*/
+/*select*/
+.select {
+  padding: 0 10px;
+  box-sizing: border-box;
+  height: 28px;
+  font-family: Verdana, sans-serif;
+  font-size: 12px;
+  line-height: 28px;
+  color: #333;
+  outline: none;
+  background: #fff;
+  border: 1px solid #d5d5d5;
+}
+
+/*/select*/
 /*settings*/
 .settings {
   max-width: 970px;
@@ -237,12 +255,13 @@ ul {
   padding-top: 25px;
   padding-left: 33px;
   padding-right: 17px;
+  padding-bottom: 90px;
   background: -webkit-linear-gradient(left, #f4f4f4 0px, #f4f4f4 7px, #d5d5d5 7px, #d5d5d5 8px, #fff 8px, #fff 10px, #d5d5d5 10px, #d5d5d5 11px, #fff 11px, #fff 13px, #d5d5d5 13px, #d5d5d5 14px, #fff 14px);
   background: linear-gradient(to right, #f4f4f4 0px, #f4f4f4 7px, #d5d5d5 7px, #d5d5d5 8px, #fff 8px, #fff 10px, #d5d5d5 10px, #d5d5d5 11px, #fff 11px, #fff 13px, #d5d5d5 13px, #d5d5d5 14px, #fff 14px);
 }
 
 .settings__info {
-  width: 62.5%;
+  width: 66%;
 }
 
 .settings__title {
@@ -253,6 +272,10 @@ ul {
   margin-bottom: 40px;
 }
 
+.settings__item:last-child {
+  margin-bottom: 0;
+}
+
 .settings__item-title {
   margin-bottom: 10px;
 }
@@ -260,15 +283,6 @@ ul {
 /*/settings*/
 /*info-list*/
 .info-list__item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   padding: 10px 18px;
   border-width: 1px 1px 0 1px;
   border-style: solid;
@@ -281,6 +295,11 @@ ul {
 
 .info-list__item:hover, .info-list__item:focus {
   background: #f4f4f4;
+}
+
+.info-list__change {
+  float: right;
+  margin-top: 8px;
 }
 
 /*/info-list*/
@@ -322,8 +341,13 @@ ul {
   background: #f4f4f4;
 }
 
-.settings-address--edit .settings-address__change {
-  display: none;
+.settings-address--edit .settings-address__item {
+  padding-bottom: 13px;
+  border-bottom: 1px solid #d5d5d5;
+}
+
+.settings-address--edit .settings-address__list {
+  margin-bottom: 0;
 }
 
 .settings-address--edit .settings-address__list-item .settings-address__list-input {
@@ -356,6 +380,10 @@ ul {
   display: none;
 }
 
+.settings-address--edit .new-address {
+  display: block;
+}
+
 /*/settings-address*/
 /*subscription*/
 .subscription__item {
@@ -367,4 +395,41 @@ ul {
 }
 
 /*/subscription*/
+/*new-address*/
+.new-address {
+  display: none;
+  padding: 19px 19px 29px;
+  font-size: 0;
+}
+
+.new-address__title {
+  margin-bottom: 10px;
+}
+
+.new-address__wrapper {
+  margin-bottom: 10px;
+}
+
+.new-address__item {
+  display: inline-block;
+  vertical-align: top;
+  width: 31%;
+  margin-right: 3%;
+}
+
+.new-address__item:last-child {
+  width: 32%;
+  margin-right: 0;
+}
+
+.new-address__item-lg {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.new-address__add {
+  float: right;
+}
+
+/*/new-address*/
 /*end of style*/

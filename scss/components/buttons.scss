@@ -34,5 +34,12 @@
   border: none;
   border-bottom: 2px solid $grey-btn-bdr;
   outline: none;
+
+  &:hover,
+  &:focus {
+    background: $red;
+
+    border-bottom-color: $red-dark;
+  }
 }
 /*/buttons*/

@@ -15,47 +15,63 @@ html
                         h2.title-md.settings__item-title Личные данные
                         ul.info-list
                             li.info-list__item
-                                input(type='text', name='name', placeholder='Имя', value='Дмитрий', disabled).text-input.info-list__input
-                                button(type='button').btn-sm.info-list__change изменить
+                                input(type='text', name='name', placeholder='Имя', value='Дмитрий', disabled).text-input.info-list__input.js-input
+                                button(type='button').btn-sm.info-list__change.js-input-change изменить
                             li.info-list__item
-                                input(type='text', name='name', placeholder='Фамилия', disabled).text-input.info-list__input
-                                button(type='button').btn-sm.info-list__change изменить
+                                input(type='text', name='surname', placeholder='Фамилия', disabled).text-input.info-list__input.js-input
+                                button(type='button').btn-sm.info-list__change.js-input-change изменить
                             li.info-list__item
-                                input(type='text', name='name', placeholder='Отчество', disabled).text-input.info-list__input
-                                button(type='button').btn-sm.info-list__change изменить
+                                input(type='text', name='patronymic', placeholder='Отчество', disabled).text-input.info-list__input.js-input
+                                button(type='button').btn-sm.info-list__change.js-input-change изменить
                             li.info-list__item
-                                input(type='text', name='name', placeholder='Дата рождения', disabled).text-input.info-list__input
-                                button(type='button').btn-sm.info-list__change изменить
+                                input(type='text', name='birthday', placeholder='Дата рождения', disabled).text-input.info-list__input.js-input
+                                button(type='button').btn-sm.info-list__change.js-input-change изменить
                     li.settings__item
                         h2.title-md.settings__item-title Контактные данные
                         ul.info-list
                             li.info-list__item
-                                input(type='text', name='name', placeholder='+7(___)-___-____', disabled).text-input.info-list__input
-                                button(type='button').btn-sm.info-list__change изменить
+                                input(type='text', name='tel', placeholder='+7(___)-___-____', disabled).text-input.info-list__input.js-input
+                                button(type='button').btn-sm.info-list__change.js-input-change изменить
                             li.info-list__item
-                                input(type='text', name='name', placeholder='E-mail', value='dmitriy_loginov@gmail.com', disabled).text-input.info-list__input
-                                button(type='button').btn-sm.info-list__change изменить
+                                input(type='text', name='email', placeholder='E-mail', value='dmitriy_loginov@gmail.com', disabled).text-input.info-list__input.js-input
+                                button(type='button').btn-sm.info-list__change.js-input-change изменить
                             li.info-list__item
-                                input(type='text', name='name', placeholder='Пароль [********]', disabled).text-input.info-list__input
-                                button(type='button').btn-sm.info-list__change изменить
+                                input(type='password', name='password', placeholder='Пароль [********]', disabled).text-input.info-list__input.js-input
+                                button(type='button').btn-sm.info-list__change.js-input-change изменить
                     li.settings__item
                         h2.title-md.settings__item-title Адресная книга
-                        section.settings-address.settings-address--edit
+                        section.settings-address
                             div.settings-address__item
-                                button(type='button').btn-sm.settings-address__change изменить
+                                button(type='button').btn-sm.settings-address__change.js-change-address изменить
                                 h3.title-sm.settings-address__title Текущий адрес доставки
                                 ul.settings-address__list
                                     li.settings-address__list-item
                                         input(type='radio', name='address-radiobtn', id='address-1', checked).radiobtn
                                         label(for='address-1').title-xs.radiolbl.settings-address__list-radiolbl 432 071 Россия, г. Троицк, ул. Ленина д.34. кв.54
-                                        input(type='text', name='name', value='432 071 Россия, г. Троицк, ул. Ленина д.34. кв.54').text-input.text-input--sm.settings-address__list-input
-                                        button(type='button').btn-sm.settings-address__list-del удалить
+                                        input(type='text', name='address-1', value='432 071 Россия, г. Троицк, ул. Ленина д.34. кв.54').text-input.text-input--sm.settings-address__list-input
+                                        button(type='button').btn-sm.settings-address__list-del.js-delete-address удалить
                                     li.settings-address__list-item
                                         input(type='radio', name='address-radiobtn', id='address-2').radiobtn
                                         label(for='address-2').title-xs.radiolbl.settings-address__list-radiolbl 445 086 Россия, г. Керчь, ул. Первого Интернационала д.14. кв.6
-                                        input(type='text', name='name', value='445 086 Россия, г. Керчь, ул. Первого Интернационала д.14. кв.6').text-input.text-input--sm.settings-address__list-input
-                                        button(type='button').btn-sm.settings-address__list-del удалить
+                                        input(type='text', name='address-2', value='445 086 Россия, г. Керчь, ул. Первого Интернационала д.14. кв.6').text-input.text-input--sm.settings-address__list-input
+                                        button(type='button').btn-sm.settings-address__list-del.js-delete-address удалить
                                 button(type='button').btn.settings-address__add Добавить еще один адрес
+                            div.new-address.clearfix
+                                h3.new-address__title.title-sm-bold Добавить адрес
+                                div.new-address__wrapper
+                                    input(type='text', name='new-index', placeholder='Индекс').text-input.text-input--sm.new-address__item
+                                    select(name='new-country').select.new-address__item
+                                        option(value='', disabled, selected, hidden) Страна
+                                        option(value='Россия') Россия
+                                        option(value='Испания') Испания
+                                        option(value='Болгария') Болгария
+                                    select(name='new-city').select.new-address__item
+                                        option(value='', disabled, selected, hidden) Город
+                                        option(value='Россия') Москва
+                                        option(value='Испания') Нью-Йорк
+                                        option(value='Болгария') Веллингтон
+                                input(type='text', name='new-address', placeholder='Адрес').text-input.text-input--sm.new-address__item-lg
+                                button(type='button').btn.new-address__add Добавить адрес
                     li.settings__item
                         h2.title-md.settings__item-title Подписки и уведомления
                         ul.subscription
@@ -73,5 +89,5 @@ html
             div.settings__social
 
 
-        //script(src='js/jquery-3.0.0.min.js')
-        //script(src='js/script.js')
+        script(src='js/jquery-3.0.0.min.js')
+        script(src='js/script.js')

@@ -1,0 +1,42 @@
+/*new-address*/
+.new-address {
+  display: none;
+
+  padding: 19px 19px 29px;
+
+  font-size: 0;
+
+  &__title {
+    margin-bottom: 10px;
+  }
+
+  &__wrapper {
+    margin-bottom: 10px;
+  }
+
+  &__item {
+    display: inline-block;
+    vertical-align: top;
+
+    width: 31%;
+
+    margin-right: 3%;
+
+    &:last-child {
+      width: 32%;
+
+      margin-right: 0;
+    }
+  }
+
+  &__item-lg {
+    width: 100%;
+
+    margin-bottom: 20px;
+  }
+
+  &__add {
+    float: right;
+  }
+}
+/*/new-address*/

@@ -16,20 +16,20 @@
             <h2 class="title-md settings__item-title">Личные данные</h2>
             <ul class="info-list">
               <li class="info-list__item">
-                <input type="text" name="name" placeholder="Имя" value="Дмитрий" disabled class="text-input info-list__input">
-                <button type="button" class="btn-sm info-list__change">изменить</button>
+                <input type="text" name="name" placeholder="Имя" value="Дмитрий" disabled class="text-input info-list__input js-input">
+                <button type="button" class="btn-sm info-list__change js-input-change">изменить</button>
               </li>
               <li class="info-list__item">
-                <input type="text" name="name" placeholder="Фамилия" disabled class="text-input info-list__input">
-                <button type="button" class="btn-sm info-list__change">изменить</button>
+                <input type="text" name="surname" placeholder="Фамилия" disabled class="text-input info-list__input js-input">
+                <button type="button" class="btn-sm info-list__change js-input-change">изменить</button>
               </li>
               <li class="info-list__item">
-                <input type="text" name="name" placeholder="Отчество" disabled class="text-input info-list__input">
-                <button type="button" class="btn-sm info-list__change">изменить</button>
+                <input type="text" name="patronymic" placeholder="Отчество" disabled class="text-input info-list__input js-input">
+                <button type="button" class="btn-sm info-list__change js-input-change">изменить</button>
               </li>
               <li class="info-list__item">
-                <input type="text" name="name" placeholder="Дата рождения" disabled class="text-input info-list__input">
-                <button type="button" class="btn-sm info-list__change">изменить</button>
+                <input type="text" name="birthday" placeholder="Дата рождения" disabled class="text-input info-list__input js-input">
+                <button type="button" class="btn-sm info-list__change js-input-change">изменить</button>
               </li>
             </ul>
           </li>
@@ -37,40 +37,60 @@
             <h2 class="title-md settings__item-title">Контактные данные</h2>
             <ul class="info-list">
               <li class="info-list__item">
-                <input type="text" name="name" placeholder="+7(___)-___-____" disabled class="text-input info-list__input">
-                <button type="button" class="btn-sm info-list__change">изменить</button>
+                <input type="text" name="tel" placeholder="+7(___)-___-____" disabled class="text-input info-list__input js-input">
+                <button type="button" class="btn-sm info-list__change js-input-change">изменить</button>
               </li>
               <li class="info-list__item">
-                <input type="text" name="name" placeholder="E-mail" value="dmitriy_loginov@gmail.com" disabled class="text-input info-list__input">
-                <button type="button" class="btn-sm info-list__change">изменить</button>
+                <input type="text" name="email" placeholder="E-mail" value="dmitriy_loginov@gmail.com" disabled class="text-input info-list__input js-input">
+                <button type="button" class="btn-sm info-list__change js-input-change">изменить</button>
               </li>
               <li class="info-list__item">
-                <input type="text" name="name" placeholder="Пароль [********]" disabled class="text-input info-list__input">
-                <button type="button" class="btn-sm info-list__change">изменить</button>
+                <input type="password" name="password" placeholder="Пароль [********]" disabled class="text-input info-list__input js-input">
+                <button type="button" class="btn-sm info-list__change js-input-change">изменить</button>
               </li>
             </ul>
           </li>
           <li class="settings__item">
             <h2 class="title-md settings__item-title">Адресная книга</h2>
-            <section class="settings-address settings-address--edit">
+            <section class="settings-address">
               <div class="settings-address__item">
-                <button type="button" class="btn-sm settings-address__change">изменить</button>
+                <button type="button" class="btn-sm settings-address__change js-change-address">изменить</button>
                 <h3 class="title-sm settings-address__title">Текущий адрес доставки</h3>
                 <ul class="settings-address__list">
                   <li class="settings-address__list-item">
                     <input type="radio" name="address-radiobtn" id="address-1" checked class="radiobtn">
                     <label for="address-1" class="title-xs radiolbl settings-address__list-radiolbl">432 071 Россия, г. Троицк, ул. Ленина д.34. кв.54</label>
-                    <input type="text" name="name" value="432 071 Россия, г. Троицк, ул. Ленина д.34. кв.54" class="text-input text-input--sm settings-address__list-input">
-                    <button type="button" class="btn-sm settings-address__list-del">удалить</button>
+                    <input type="text" name="address-1" value="432 071 Россия, г. Троицк, ул. Ленина д.34. кв.54" class="text-input text-input--sm settings-address__list-input">
+                    <button type="button" class="btn-sm settings-address__list-del js-delete-address">удалить</button>
                   </li>
                   <li class="settings-address__list-item">
                     <input type="radio" name="address-radiobtn" id="address-2" class="radiobtn">
                     <label for="address-2" class="title-xs radiolbl settings-address__list-radiolbl">445 086 Россия, г. Керчь, ул. Первого Интернационала д.14. кв.6</label>
-                    <input type="text" name="name" value="445 086 Россия, г. Керчь, ул. Первого Интернационала д.14. кв.6" class="text-input text-input--sm settings-address__list-input">
-                    <button type="button" class="btn-sm settings-address__list-del">удалить</button>
+                    <input type="text" name="address-2" value="445 086 Россия, г. Керчь, ул. Первого Интернационала д.14. кв.6" class="text-input text-input--sm settings-address__list-input">
+                    <button type="button" class="btn-sm settings-address__list-del js-delete-address">удалить</button>
                   </li>
                 </ul>
                 <button type="button" class="btn settings-address__add">Добавить еще один адрес</button>
+              </div>
+              <div class="new-address clearfix">
+                <h3 class="new-address__title title-sm-bold">Добавить адрес</h3>
+                <div class="new-address__wrapper">
+                  <input type="text" name="new-index" placeholder="Индекс" class="text-input text-input--sm new-address__item">
+                  <select name="new-country" class="select new-address__item">
+                    <option value="" disabled selected hidden>Страна</option>
+                    <option value="Россия">Россия</option>
+                    <option value="Испания">Испания</option>
+                    <option value="Болгария">Болгария</option>
+                  </select>
+                  <select name="new-city" class="select new-address__item">
+                    <option value="" disabled selected hidden>Город</option>
+                    <option value="Россия">Москва</option>
+                    <option value="Испания">Нью-Йорк</option>
+                    <option value="Болгария">Веллингтон</option>
+                  </select>
+                </div>
+                <input type="text" name="new-address" placeholder="Адрес" class="text-input text-input--sm new-address__item-lg">
+                <button type="button" class="btn new-address__add">Добавить адрес</button>
               </div>
             </section>
           </li>
@@ -91,7 +111,7 @@
       </form>
       <div class="settings__social"></div>
     </section>
-    <!--script(src='js/jquery-3.0.0.min.js')-->
-    <!--script(src='js/script.js')-->
+    <script src="js/jquery-3.0.0.min.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>

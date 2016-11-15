@@ -24,6 +24,15 @@
   font-weight: 400;
 }
 
+.title-sm-bold {
+  font-family: OpenSans-Bold, sans-serif;
+  font-size: 14px;
+  line-height: 1.2em;
+  color: $grey-dark;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
 .title-xs {
   font-family: Verdana, sans-serif;
   font-size: 12px;
@@ -35,6 +44,7 @@
 .text-input {
   padding: 0 10px;
   box-sizing: border-box;
+  height: 28px;
 
   font-family: Verdana, sans-serif;
   font-size: 14px;
