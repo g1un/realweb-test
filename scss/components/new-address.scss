@@ -2,12 +2,12 @@
 .new-address {
   display: none;
 
-  padding: 19px 19px 29px;
+  padding: 15px 19px 29px;
 
   font-size: 0;
 
   &__title {
-    margin-bottom: 10px;
+    margin-bottom: 18px;
   }
 
   &__wrapper {
@@ -37,6 +37,22 @@
 
   &__add {
     float: right;
+  }
+
+  @media (max-width: $width-xs) {
+
+    &__item {
+      width: 100%;
+
+      margin-right: 0;
+      margin-bottom: 10px;
+
+      &:last-child {
+        width: 100%;
+
+        margin-bottom: 0;
+      }
+    }
   }
 }
 /*/new-address*/

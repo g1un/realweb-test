@@ -2,7 +2,7 @@
 .info-list {
 
   &__item {
-    padding: 10px 18px;
+    padding: 10px 18px 8px 8px;
 
     border-width: 1px 1px 0 1px;
     border-style: solid;
@@ -18,10 +18,21 @@
     }
   }
 
+  &__input {
+    width: 52%;
+  }
+
   &__change {
     float: right;
 
     margin-top: 8px;
+  }
+
+  @media (max-width: $width-sm) {
+
+    &__input {
+      width: 70%;
+    }
   }
 }
 /*/info-list*/

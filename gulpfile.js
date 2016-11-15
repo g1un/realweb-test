@@ -6,6 +6,8 @@ var spritesmith = require('gulp.spritesmith');
 var merge = require('merge-stream');
 var replace = require('gulp-replace');
 var browserSync = require('browser-sync').create();
+var cssnano = require('gulp-cssnano');
+var concat = require('gulp-concat');
 
 gulp.task('sass', function(){
 	return gulp.src('scss/style.scss')
@@ -14,6 +16,7 @@ gulp.task('sass', function(){
 	}))
 	.pipe(autoprefixer())
 	.pipe(replace('sprite.png', '../img/sprite.png'))
+	.pipe(cssnano())
 	.pipe(gulp.dest('app/css'))
 	.pipe(browserSync.reload({
 		stream: true
@@ -44,6 +47,13 @@ gulp.task('sprite', function () {
 		.pipe(gulp.dest('scss/components'));
 
 	return merge(imgStream, cssStream);
+});
+
+gulp.task('scripts', function() {
+	gulp.src(['js/jquery-3.0.0.min.js', 'js/script.js'])
+		.pipe(concat('all.js'))
+		.pipe(uglify())
+		.pipe(gulp.dest('app/js'))
 });
 
 gulp.task('watch', ['browserSync', 'sass', 'jade', 'sprite'], function(){

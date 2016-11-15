@@ -1,8 +1,11 @@
 /*style*/
+@import "components/normalize";
+
 @import "components/variables";
 @import "components/general";
 @import "components/fonts";
 @import "components/typography";
+@import "components/sprite";
 @import "components/buttons";
 @import "components/radio";
 @import "components/checkbox";
@@ -13,4 +16,5 @@
 @import "components/settings-address";
 @import "components/subscription";
 @import "components/new-address";
+@import "components/social";
 /*end of style*/

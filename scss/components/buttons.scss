@@ -42,4 +42,68 @@
     border-bottom-color: $red-dark;
   }
 }
+
+.btn-social {
+  display: block;
+
+  width: 100%;
+  box-sizing: border-box;
+
+  padding-left: 55px;
+
+  color: #fff;
+  line-height: 40px;
+  text-decoration: none;
+
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+  }
+
+  &--fb {
+    background: $blue-social-dark;
+
+    &::before {
+      top: 11px;
+      left: 21px;
+
+      @include sprite($fb);
+    }
+  }
+
+  &--vk {
+    background: $green-social;
+
+    &::before {
+      top: 15px;
+      left: 13px;
+
+      @include sprite($vk);
+    }
+  }
+
+  &--tw {
+    background: $blue-social;
+
+    &::before {
+      top: 12px;
+      left: 15px;
+
+      @include sprite($twitter);
+    }
+  }
+
+  &--ok {
+    background: $red-social;
+
+    &::before {
+      top: 12px;
+      left: 20px;
+
+      @include sprite($ok);
+    }
+  }
+}
 /*/buttons*/

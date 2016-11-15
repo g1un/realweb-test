@@ -1,0 +1,31 @@
+/*social*/
+.social {
+  padding: 26px 20px 35px 22px;
+  box-sizing: border-box;
+
+  background: $sandy;
+
+  &__title {
+    margin-bottom: 15px;
+  }
+
+  &__info {
+    margin-bottom: 21px;
+  }
+
+  &__item {
+    margin-bottom: 15px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (max-width: $width-sm) {
+
+    &__item {
+      max-width: 253px;
+    }
+  }
+}
+/*/social*/

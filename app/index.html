@@ -4,11 +4,10 @@
     <title>«Realweb»</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
-    <section class="settings">
+    <section class="settings clearfix">
       <h1 class="settings__title title-lg">Мои настройки</h1>
       <form action="#" method="get" class="settings__info">
         <ul class="settings__list">
@@ -109,7 +108,16 @@
           </li>
         </ul>
       </form>
-      <div class="settings__social"></div>
+      <div class="settings__social social">
+        <h2 class="title-sm-bold social__title">Социальные сети</h2>
+        <p class="text-sm social__info">Привяжите учетную запись социальной сети и используйте ee для входа</p>
+        <ul class="social__list">
+          <li class="social__item"><a href="#" class="title-sm btn-social btn-social--fb">Facebook</a></li>
+          <li class="social__item"><a href="#" class="title-sm btn-social btn-social--vk">Вконтакте</a></li>
+          <li class="social__item"><a href="#" class="title-sm btn-social btn-social--tw">Twitter</a></li>
+          <li class="social__item"><a href="#" class="title-sm btn-social btn-social--ok">Одноклассники</a></li>
+        </ul>
+      </div>
     </section>
     <script src="js/jquery-3.0.0.min.js"></script>
     <script src="js/script.js"></script>

@@ -4,10 +4,9 @@ html
         title «Realweb»
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width")
-        link(rel='stylesheet', type='text/css', href='css/normalize.css')
         link(rel='stylesheet', type='text/css', href='css/style.css')
     body
-        section.settings
+        section.settings.clearfix
             h1.settings__title.title-lg Мои настройки
             form(action='#', method='get').settings__info
                 ul.settings__list
@@ -82,11 +81,19 @@ html
                                 input(type='checkbox', name='subscription', id='subscription-2', checked).checkbox
                                 label(for='subscription-2').title-sm.checkbox-lbl Оповещеать меня о текущих акциях по Sms
 
+            div.settings__social.social
+                h2.title-sm-bold.social__title Социальные сети
+                p.text-sm.social__info Привяжите учетную запись социальной сети и используйте ee для входа
+                ul.social__list
+                    li.social__item
+                        a(href='#').title-sm.btn-social.btn-social--fb Facebook
+                    li.social__item
+                        a(href='#').title-sm.btn-social.btn-social--vk Вконтакте
+                    li.social__item
+                        a(href='#').title-sm.btn-social.btn-social--tw Twitter
+                    li.social__item
+                        a(href='#').title-sm.btn-social.btn-social--ok Одноклассники
 
-
-
-
-            div.settings__social
 
 
         script(src='js/jquery-3.0.0.min.js')
