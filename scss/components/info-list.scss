@@ -1,0 +1,25 @@
+/*info-list*/
+.info-list {
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 10px 18px;
+
+    border-width: 1px 1px 0 1px;
+    border-style: solid;
+    border-color: $grey-light;
+
+    &:last-child {
+      border-bottom-width: 1px;
+    }
+
+    &:hover,
+    &:focus {
+      background: $grey-lighter;
+    }
+  }
+}
+/*/info-list*/

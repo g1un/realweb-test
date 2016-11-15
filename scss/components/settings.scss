@@ -1,0 +1,29 @@
+/*settings*/
+.settings {
+  max-width: 970px;
+  box-sizing: border-box;
+
+  margin: 0 auto;
+  padding-top: 25px;
+  padding-left: 33px;
+  padding-right: 17px;
+
+  background: linear-gradient(to right, #{$grey-lighter} 0px, #{$grey-lighter} 7px, #{$grey-light} 7px, #{$grey-light} 8px, #fff 8px, #fff 10px, #{$grey-light} 10px, #{$grey-light} 11px, #fff 11px, #fff 13px, #{$grey-light} 13px, #{$grey-light} 14px, #fff 14px);
+
+  &__info {
+    width: 62.5%;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__item {
+    margin-bottom: 40px;
+  }
+
+  &__item-title {
+    margin-bottom: 10px;
+  }
+}
+/*/settings*/

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>«Realweb»</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+  <body>
+    <section class="settings">
+      <h1 class="settings__title title-lg">Мои настройки</h1>
+      <form action="#" method="get" class="settings__info">
+        <ul class="settings__list">
+          <li class="settings__item">
+            <h2 class="title-md settings__item-title">Личные данные</h2>
+            <ul class="info-list">
+              <li class="info-list__item">
+                <input type="text" name="name" placeholder="Имя" value="Дмитрий" disabled class="text-input info-list__input">
+                <button type="button" class="btn-sm info-list__change">изменить</button>
+              </li>
+              <li class="info-list__item">
+                <input type="text" name="name" placeholder="Фамилия" disabled class="text-input info-list__input">
+                <button type="button" class="btn-sm info-list__change">изменить</button>
+              </li>
+              <li class="info-list__item">
+                <input type="text" name="name" placeholder="Отчество" disabled class="text-input info-list__input">
+                <button type="button" class="btn-sm info-list__change">изменить</button>
+              </li>
+              <li class="info-list__item">
+                <input type="text" name="name" placeholder="Дата рождения" disabled class="text-input info-list__input">
+                <button type="button" class="btn-sm info-list__change">изменить</button>
+              </li>
+            </ul>
+          </li>
+          <li class="settings__item">
+            <h2 class="title-md settings__item-title">Контактные данные</h2>
+            <ul class="info-list">
+              <li class="info-list__item">
+                <input type="text" name="name" placeholder="+7(___)-___-____" disabled class="text-input info-list__input">
+                <button type="button" class="btn-sm info-list__change">изменить</button>
+              </li>
+              <li class="info-list__item">
+                <input type="text" name="name" placeholder="E-mail" value="dmitriy_loginov@gmail.com" disabled class="text-input info-list__input">
+                <button type="button" class="btn-sm info-list__change">изменить</button>
+              </li>
+              <li class="info-list__item">
+                <input type="text" name="name" placeholder="Пароль [********]" disabled class="text-input info-list__input">
+                <button type="button" class="btn-sm info-list__change">изменить</button>
+              </li>
+            </ul>
+          </li>
+          <li class="settings__item">
+            <h2 class="title-md settings__item-title">Адресная книга</h2>
+            <section class="settings-address settings-address--edit">
+              <div class="settings-address__item">
+                <button type="button" class="btn-sm settings-address__change">изменить</button>
+                <h3 class="title-sm settings-address__title">Текущий адрес доставки</h3>
+                <ul class="settings-address__list">
+                  <li class="settings-address__list-item">
+                    <input type="radio" name="address-radiobtn" id="address-1" checked class="radiobtn">
+                    <label for="address-1" class="title-xs radiolbl settings-address__list-radiolbl">432 071 Россия, г. Троицк, ул. Ленина д.34. кв.54</label>
+                    <input type="text" name="name" value="432 071 Россия, г. Троицк, ул. Ленина д.34. кв.54" class="text-input text-input--sm settings-address__list-input">
+                    <button type="button" class="btn-sm settings-address__list-del">удалить</button>
+                  </li>
+                  <li class="settings-address__list-item">
+                    <input type="radio" name="address-radiobtn" id="address-2" class="radiobtn">
+                    <label for="address-2" class="title-xs radiolbl settings-address__list-radiolbl">445 086 Россия, г. Керчь, ул. Первого Интернационала д.14. кв.6</label>
+                    <input type="text" name="name" value="445 086 Россия, г. Керчь, ул. Первого Интернационала д.14. кв.6" class="text-input text-input--sm settings-address__list-input">
+                    <button type="button" class="btn-sm settings-address__list-del">удалить</button>
+                  </li>
+                </ul>
+                <button type="button" class="btn settings-address__add">Добавить еще один адрес</button>
+              </div>
+            </section>
+          </li>
+          <li class="settings__item">
+            <h2 class="title-md settings__item-title">Подписки и уведомления</h2>
+            <ul class="subscription">
+              <li class="subscription__item">
+                <input type="checkbox" name="subscription" id="subscription-1" checked class="checkbox">
+                <label for="subscription-1" class="title-sm checkbox-lbl">Оповещеать меня о текущих акциях по e-mail</label>
+              </li>
+              <li class="subscription__item">
+                <input type="checkbox" name="subscription" id="subscription-2" checked class="checkbox">
+                <label for="subscription-2" class="title-sm checkbox-lbl">Оповещеать меня о текущих акциях по Sms</label>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </form>
+      <div class="settings__social"></div>
+    </section>
+    <!--script(src='js/jquery-3.0.0.min.js')-->
+    <!--script(src='js/script.js')-->
+  </body>
+</html>

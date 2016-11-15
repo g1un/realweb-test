@@ -1,0 +1,84 @@
+/*settings-address*/
+.settings-address {
+  border: 1px solid $grey-light;
+
+  &__item {
+    padding: 19px 19px 29px;
+  }
+
+  &__visible {
+    display: block;
+  }
+
+  &__change {
+    float: right;
+  }
+
+  &__title {
+    margin-bottom: 15px;
+  }
+
+  &__list {
+    margin-bottom: 30px;
+  }
+
+  &__list-input {
+    display: none;
+    width: 75%;
+  }
+
+  &__list-del {
+    display: none;
+  }
+
+  &--edit {
+    background: $grey-lighter;
+
+    .settings-address {
+
+      &__change {
+        display: none;
+      }
+
+      &__list-item {
+
+        .settings-address__list-input {
+          border-bottom-width: 0;
+        }
+
+        &:last-child {
+
+          .settings-address__list-input {
+            border-bottom-width: 1px;
+          }
+        }
+      }
+
+      &__list-radiolbl {
+        display: inline-block;
+        vertical-align: middle;
+
+        width: 0;
+
+        font-size: 0;
+      }
+
+      &__list-input {
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+      &__list-del {
+        display: block;
+        float: right;
+
+        margin-top: 8px;
+      }
+
+      &__add {
+        display: none;
+      }
+    }
+  }
+}
+/*/settings-address*/

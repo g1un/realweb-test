@@ -1,0 +1,38 @@
+/*buttons*/
+.btn-sm {
+  padding: 0;
+
+  font-family: Verdana, sans-serif;
+  font-size: 12px;
+  line-height: 1.2em;
+  color: $grey;
+  text-decoration: underline;
+
+  background: none;
+  border: none;
+  outline: none;
+  
+  &:hover,
+  &:focus {
+    color: $red;
+  }
+}
+
+.btn {
+  min-width: 200px;
+  box-sizing: border-box;
+
+  padding: 0 5px;
+
+  @extend .title-xs;
+  line-height: 28px;
+  color: #fff;
+  text-align: center;
+
+  background: $grey-btn;
+
+  border: none;
+  border-bottom: 2px solid $grey-btn-bdr;
+  outline: none;
+}
+/*/buttons*/

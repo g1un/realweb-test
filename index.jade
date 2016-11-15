@@ -1,0 +1,77 @@
+doctype html
+html
+    head
+        title «Realweb»
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width")
+        link(rel='stylesheet', type='text/css', href='css/normalize.css')
+        link(rel='stylesheet', type='text/css', href='css/style.css')
+    body
+        section.settings
+            h1.settings__title.title-lg Мои настройки
+            form(action='#', method='get').settings__info
+                ul.settings__list
+                    li.settings__item
+                        h2.title-md.settings__item-title Личные данные
+                        ul.info-list
+                            li.info-list__item
+                                input(type='text', name='name', placeholder='Имя', value='Дмитрий', disabled).text-input.info-list__input
+                                button(type='button').btn-sm.info-list__change изменить
+                            li.info-list__item
+                                input(type='text', name='name', placeholder='Фамилия', disabled).text-input.info-list__input
+                                button(type='button').btn-sm.info-list__change изменить
+                            li.info-list__item
+                                input(type='text', name='name', placeholder='Отчество', disabled).text-input.info-list__input
+                                button(type='button').btn-sm.info-list__change изменить
+                            li.info-list__item
+                                input(type='text', name='name', placeholder='Дата рождения', disabled).text-input.info-list__input
+                                button(type='button').btn-sm.info-list__change изменить
+                    li.settings__item
+                        h2.title-md.settings__item-title Контактные данные
+                        ul.info-list
+                            li.info-list__item
+                                input(type='text', name='name', placeholder='+7(___)-___-____', disabled).text-input.info-list__input
+                                button(type='button').btn-sm.info-list__change изменить
+                            li.info-list__item
+                                input(type='text', name='name', placeholder='E-mail', value='dmitriy_loginov@gmail.com', disabled).text-input.info-list__input
+                                button(type='button').btn-sm.info-list__change изменить
+                            li.info-list__item
+                                input(type='text', name='name', placeholder='Пароль [********]', disabled).text-input.info-list__input
+                                button(type='button').btn-sm.info-list__change изменить
+                    li.settings__item
+                        h2.title-md.settings__item-title Адресная книга
+                        section.settings-address.settings-address--edit
+                            div.settings-address__item
+                                button(type='button').btn-sm.settings-address__change изменить
+                                h3.title-sm.settings-address__title Текущий адрес доставки
+                                ul.settings-address__list
+                                    li.settings-address__list-item
+                                        input(type='radio', name='address-radiobtn', id='address-1', checked).radiobtn
+                                        label(for='address-1').title-xs.radiolbl.settings-address__list-radiolbl 432 071 Россия, г. Троицк, ул. Ленина д.34. кв.54
+                                        input(type='text', name='name', value='432 071 Россия, г. Троицк, ул. Ленина д.34. кв.54').text-input.text-input--sm.settings-address__list-input
+                                        button(type='button').btn-sm.settings-address__list-del удалить
+                                    li.settings-address__list-item
+                                        input(type='radio', name='address-radiobtn', id='address-2').radiobtn
+                                        label(for='address-2').title-xs.radiolbl.settings-address__list-radiolbl 445 086 Россия, г. Керчь, ул. Первого Интернационала д.14. кв.6
+                                        input(type='text', name='name', value='445 086 Россия, г. Керчь, ул. Первого Интернационала д.14. кв.6').text-input.text-input--sm.settings-address__list-input
+                                        button(type='button').btn-sm.settings-address__list-del удалить
+                                button(type='button').btn.settings-address__add Добавить еще один адрес
+                    li.settings__item
+                        h2.title-md.settings__item-title Подписки и уведомления
+                        ul.subscription
+                            li.subscription__item
+                                input(type='checkbox', name='subscription', id='subscription-1', checked).checkbox
+                                label(for='subscription-1').title-sm.checkbox-lbl Оповещеать меня о текущих акциях по e-mail
+                            li.subscription__item
+                                input(type='checkbox', name='subscription', id='subscription-2', checked).checkbox
+                                label(for='subscription-2').title-sm.checkbox-lbl Оповещеать меня о текущих акциях по Sms
+
+
+
+
+
+            div.settings__social
+
+
+        //script(src='js/jquery-3.0.0.min.js')
+        //script(src='js/script.js')
