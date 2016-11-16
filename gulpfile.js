@@ -8,6 +8,7 @@ var replace = require('gulp-replace');
 var browserSync = require('browser-sync').create();
 var cssnano = require('gulp-cssnano');
 var concat = require('gulp-concat');
+var uglify = require('gulp-uglify');
 
 gulp.task('sass', function(){
 	return gulp.src('scss/style.scss')
@@ -50,24 +51,24 @@ gulp.task('sprite', function () {
 });
 
 gulp.task('scripts', function() {
-	gulp.src(['js/jquery-3.0.0.min.js', 'js/script.js'])
+	gulp.src(['js/jquery-3.0.0.min.js', 'js/placeholders.jquery.min.js', 'js/script.js'])
 		.pipe(concat('all.js'))
 		.pipe(uglify())
 		.pipe(gulp.dest('app/js'))
 });
 
-gulp.task('watch', ['browserSync', 'sass', 'jade', 'sprite'], function(){
+gulp.task('watch', ['browserSync', 'sass', 'jade', 'sprite', 'scripts'], function(){
 	gulp.watch('**/*.scss', ['sass']);
 	gulp.watch('*.jade', ['jade']);
 	gulp.watch('app/img/sprite/*.png', ['sprite']);
 	gulp.watch('app/*.html', browserSync.reload);
-	gulp.watch('app/js/**/*.js', browserSync.reload);
+	gulp.watch('js/*.js', ['scripts']);
 });
 gulp.task('browserSync', function() {
 	browserSync.init({
 		server: {
 			baseDir: 'app',
 			index: "index.html"
-		},
+		}
 	})
 });
